@@ -1,0 +1,15 @@
+node_modules
+dist
+*.local
+.DS_Store
+
+# local AI tooling, not part of the site
+.claude/
+
+# original photo drop (copied to public/profile.jpg)
+1718325211008.jpg
+
+# personal source documents — the proposal is SIT Confidential, never commit
+SomashekharDehury.pdf
+SINGA_Fellowship_Tricog_MaheshPanicker_ver2.pdf
+*.pdf
