@@ -13,3 +13,5 @@ dist
 SomashekharDehury.pdf
 SINGA_Fellowship_Tricog_MaheshPanicker_ver2.pdf
 *.pdf
+# the public CV is intentionally published
+!public/Somashekhar_Dehury_CV.pdf

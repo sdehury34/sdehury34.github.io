@@ -17,8 +17,9 @@ export const profile = {
     'Industrial doctorate researcher at the Singapore Institute of Technology with Tricog Health, working towards a wearable multi-view echocardiography patch: flexible ultrasound arrays, deep learning beamforming, and GPU accelerated imaging.',
   location: 'Singapore',
   email: 'somashekhar.dehury@gmail.com',
-  // Photo lives in /public. Set to null to show a monogram avatar instead.
+  // Photo and CV live in /public.
   photo: `${import.meta.env.BASE_URL}profile.jpg`,
+  cv: `${import.meta.env.BASE_URL}Somashekhar_Dehury_CV.pdf`,
   // wrap words in **double asterisks** to highlight them on the page
   about: [
     "I went from programming 8051 microcontrollers to **imaging the human heart**. After my B.Tech in Electronics & Communication at NIT Calicut (CGPA 8.95), I'm now pursuing an **Industrial Doctorate** at SIT, Singapore, as a **SINGA Scholar**, building **wearable cardiac ultrasound** with Tricog Health.",
@@ -81,6 +82,11 @@ export const publications = [
 export const socials = [
   { label: 'GitHub', url: 'https://github.com/sdehury34' },
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/somashekhar-d-403195212/' },
+  // swap for your Scholar profile URL once you create one
+  {
+    label: 'Google Scholar',
+    url: 'https://scholar.google.com/scholar?q=%22Somashekhar+Dehury%22',
+  },
   { label: 'Instagram', url: 'https://www.instagram.com/thisissomashekhar/' },
 ]
 

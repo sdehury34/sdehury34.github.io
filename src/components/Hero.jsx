@@ -6,7 +6,7 @@ import {
   useScroll,
   useTransform,
 } from 'framer-motion'
-import { ArrowDownRight, Mail } from 'lucide-react'
+import { ArrowDownRight, Download, Mail } from 'lucide-react'
 import { profile } from '../data.js'
 import { EASE } from './Reveal.jsx'
 import UltrasoundField from './UltrasoundField.jsx'
@@ -127,6 +127,9 @@ export default function Hero({ started }) {
         <motion.div className="cta-row" {...fadeUp(0.75)}>
           <a href="#projects" className="btn-primary">
             View My Work <ArrowDownRight size={16} aria-hidden="true" />
+          </a>
+          <a href={profile.cv} download className="btn-ghost">
+            <Download size={16} aria-hidden="true" /> Download CV
           </a>
           <a href={`mailto:${profile.email}`} className="btn-ghost">
             <Mail size={16} aria-hidden="true" /> Get in Touch
