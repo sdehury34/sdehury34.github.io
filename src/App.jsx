@@ -6,6 +6,8 @@ import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import Marquee from './components/Marquee.jsx'
 import About from './components/About.jsx'
+import Research from './components/Research.jsx'
+import Publications from './components/Publications.jsx'
 import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Milestones from './components/Milestones.jsx'
@@ -27,6 +29,8 @@ export default function App() {
         <Hero started={!loading} />
         <Marquee />
         <About />
+        <Research />
+        <Publications />
         <Skills />
         <Projects />
         <Milestones />

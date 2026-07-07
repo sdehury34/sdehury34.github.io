@@ -1,4 +1,5 @@
 import Reveal, { SectionHead } from './Reveal.jsx'
+import Highlight from './Highlight.jsx'
 import { profile, education } from '../data.js'
 
 export default function About() {
@@ -25,7 +26,7 @@ export default function About() {
           <div className="about-copy">
             {profile.about.map((p, i) => (
               <Reveal key={i} delay={0.15 + i * 0.1} as="p">
-                {p}
+                <Highlight text={p} />
               </Reveal>
             ))}
             {education.map((edu, i) => (

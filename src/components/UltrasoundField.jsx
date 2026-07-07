@@ -79,10 +79,10 @@ export default function UltrasoundField() {
       last = now
       ctx.clearRect(0, 0, width, height)
 
-      // heartbeat pulse from a fixed origin (~66 bpm)
+      // fallback heartbeat pulse if the 3D heart isn't emitting (~66 bpm)
       beatTimer -= dt
       if (beatTimer <= 0) {
-        pulse(width * 0.76, height * 0.4, 1.3)
+        pulse(width * 0.72, height * 0.42, 1.3)
         beatTimer = 1.8
       }
 
@@ -160,18 +160,26 @@ export default function UltrasoundField() {
       const { x, y } = toLocal(e)
       pulse(x, y, 2)
     }
+    // ripple in sync with the 3D heart's systole
+    const onHeartbeat = (e) => {
+      const rect = host.getBoundingClientRect()
+      pulse(e.detail.x - rect.left, e.detail.y - rect.top, 1.3)
+      beatTimer = 3 // suppress the fallback while the heart is beating
+    }
 
     resize()
     window.addEventListener('resize', resize)
     if (!reduceMotion) {
       host.addEventListener('pointermove', onMove)
       host.addEventListener('click', onClick)
+      window.addEventListener('heartbeat', onHeartbeat)
       raf = requestAnimationFrame(frame)
     }
     return () => {
       window.removeEventListener('resize', resize)
       host.removeEventListener('pointermove', onMove)
       host.removeEventListener('click', onClick)
+      window.removeEventListener('heartbeat', onHeartbeat)
       cancelAnimationFrame(raf)
     }
   }, [])

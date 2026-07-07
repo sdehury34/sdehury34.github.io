@@ -19,12 +19,63 @@ export const profile = {
   email: 'somashekhar.dehury@gmail.com',
   // Photo lives in /public. Set to null to show a monogram avatar instead.
   photo: `${import.meta.env.BASE_URL}profile.jpg`,
+  // wrap words in **double asterisks** to highlight them on the page
   about: [
-    "I went from programming 8051 microcontrollers to imaging the human heart. After my B.Tech in Electronics & Communication at NIT Calicut (CGPA 8.95), I'm now pursuing an Industrial Doctorate in Infocomm Technology at SIT, Singapore, as a SINGA Scholar, building wearable cardiac ultrasound with Tricog Health.",
-    'My work lives where signals meet silicon: deep learning for image reconstruction, ultrasound physics simulation with k-Wave and SIMUS, GPU-accelerated beamforming, and the embedded front-end electronics and testing that make it all real.',
-    "Beyond the lab, I'm drawn to anything med-tech, including augmented reality in healthcare with Unity, and I'm open to collaborations across deep learning, simulation, and embedded systems.",
+    "I went from programming 8051 microcontrollers to **imaging the human heart**. After my B.Tech in Electronics & Communication at NIT Calicut (CGPA 8.95), I'm now pursuing an **Industrial Doctorate** at SIT, Singapore, as a **SINGA Scholar**, building **wearable cardiac ultrasound** with Tricog Health.",
+    'My work lives where signals meet silicon: **deep learning** for image reconstruction, ultrasound physics simulation with **k-Wave and SIMUS**, **GPU-accelerated beamforming**, and the embedded front-end electronics and testing that make it all real.',
+    "Beyond the lab, I'm drawn to anything **med-tech**, including **augmented reality in healthcare** with Unity, and I'm open to collaborations across deep learning, simulation, and embedded systems.",
   ],
 }
+
+// Doctorate research, described at a public-safe level
+export const research = {
+  intro:
+    'My doctorate tackles a hard problem in cardiac care: echocardiography today needs rigid probes, trained sonographers, and expensive carts. I work on a wearable alternative that images the heart continuously from multiple views.',
+  areas: [
+    {
+      icon: 'Waves',
+      title: 'Flexible Ultrasound Arrays',
+      text: 'Conformal transducer arrays that wrap around the chest for hands-free, multi-view cardiac imaging, simulated and validated with k-Wave and SIMUS.',
+    },
+    {
+      icon: 'Brain',
+      title: 'Deep Learning Beamforming',
+      text: 'Shape-adaptive and learning-based beamforming that reconstructs high-quality images even when the array geometry bends with the body.',
+    },
+    {
+      icon: 'Zap',
+      title: 'GPU Imaging Pipeline',
+      text: 'A software-defined, GPU-accelerated processing chain on commodity hardware, replacing costly custom silicon and enabling unlimited algorithm updates.',
+    },
+    {
+      icon: 'CircuitBoard',
+      title: 'Front-End Electronics & Testing',
+      text: 'Custom digital front-end design, FPGA firmware, signal-chain validation, and phantom benchmarking to take the system from concept to prototype.',
+    },
+  ],
+}
+
+export const publications = [
+  {
+    title:
+      'Deep Learning-Based Accelerated Adaptive Beamforming for Enhanced Musculoskeletal Ultrasound Imaging',
+    authors: 'Somashekhar Dehury, Midhila Madhusoodanan, Mahesh Raveendranatha Panicker',
+    venue: 'IEEE',
+    year: '2026',
+    tag: 'First Author',
+    link: 'https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Somashekhar%20Dehury',
+  },
+  {
+    title:
+      'Uncertainty-Guided Multi-Task Consistency for Semi-Supervised Carotid Plaque Segmentation and Vulnerability Assessment',
+    authors:
+      'Mahesh Raveendranatha Panicker, Rudra Sainatha, Gopika Gopikrishnan, Somashekhar Dehury',
+    venue: 'IEEE ISBI, London',
+    year: '2026',
+    tag: 'Co-Author',
+    link: 'https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Somashekhar%20Dehury',
+  },
+]
 
 export const socials = [
   { label: 'GitHub', url: 'https://github.com/sdehury34' },
@@ -119,34 +170,45 @@ export const projects = [
   },
 ]
 
+// type controls the color coding on the timeline:
+// research (sky) | education (teal) | internship (violet) | award (amber)
 export const milestones = [
-  // Achievements / experience timeline — newest first
   {
     year: 'Present',
+    type: 'research',
+    label: 'Research',
     title: 'Industrial Doctorate, SIT × Tricog Health',
     detail:
       'SINGA Scholar at the Singapore Institute of Technology (Infocomm Technology), researching wearable multi-view echocardiography: flexible ultrasound arrays, adaptive beamforming, and GPU imaging pipelines.',
   },
   {
     year: '2025',
+    type: 'education',
+    label: 'Education',
     title: 'B.Tech, NIT Calicut',
     detail:
       'Graduated in Electronics & Communication Engineering with a CGPA of 8.95.',
   },
   {
     year: '2024',
+    type: 'internship',
+    label: 'Internship',
     title: 'DAAD WISE Scholar, GSI Helmholtz Centre, Germany',
     detail:
       'Research intern at the heavy-ion research facility in Darmstadt, building microcontroller-based data acquisition and instrumentation control.',
   },
   {
     year: '2023',
+    type: 'internship',
+    label: 'Internship',
     title: 'Research Intern, ISRO',
     detail:
       'Worked on lunar lander control simulation and deep-learning-based crater detection at Trivandrum.',
   },
   {
     year: '2022',
+    type: 'award',
+    label: 'Achievement',
     title: 'Smart India Hackathon National Finalist',
     detail:
       'Built an automatic book scanner with NLP translation; selected for the national finale in New Delhi.',

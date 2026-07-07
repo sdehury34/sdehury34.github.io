@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import {
   AnimatePresence,
   motion,
@@ -10,6 +10,8 @@ import { ArrowDownRight, Mail } from 'lucide-react'
 import { profile } from '../data.js'
 import { EASE } from './Reveal.jsx'
 import UltrasoundField from './UltrasoundField.jsx'
+
+const HeartModel = lazy(() => import('./HeartModel.jsx'))
 
 function RoleCycler() {
   const [i, setI] = useState(0)
@@ -90,6 +92,11 @@ export default function Hero({ started }) {
 
       {/* interactive acoustic wavefield */}
       <UltrasoundField />
+
+      {/* 3D point-cloud heart, beating in sync with the wavefield */}
+      <Suspense fallback={null}>
+        <HeartModel />
+      </Suspense>
 
       <div className="container">
         <motion.div className="eyebrow" {...fadeUp(0.1)}>

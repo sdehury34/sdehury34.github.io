@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <section id="skills">
       <div className="container">
-        <SectionHead index="02" title="Skills" />
+        <SectionHead index="04" title="Skills" />
         <div className="skills-grid">
           {skills.map((group, i) => (
             <Reveal key={group.group} delay={i * 0.08}>
