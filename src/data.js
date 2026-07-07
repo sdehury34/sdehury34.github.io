@@ -58,12 +58,13 @@ export const research = {
 export const publications = [
   {
     title:
-      'Deep Learning-Based Accelerated Adaptive Beamforming for Enhanced Musculoskeletal Ultrasound Imaging',
-    authors: 'Somashekhar Dehury, Midhila Madhusoodanan, Mahesh Raveendranatha Panicker',
-    venue: 'IEEE',
+      'Mobile Augmented Reality for Hip Osteotomy Planning: Integration with 3D Slicer and Pilot Evaluation',
+    authors:
+      'Piyush Soni, Rahul Ganesh S, Somashekhar Dehury, Inger A. Grünbeck, Ola Wiig, Sudhish N. George, Rahul Prasanna Kumar',
+    venue: 'IEEE ISBI, London',
     year: '2026',
-    tag: 'First Author',
-    link: 'https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Somashekhar%20Dehury',
+    tag: 'AR in Healthcare',
+    link: 'https://ieeexplore.ieee.org/document/11515497',
   },
   {
     title:
@@ -72,8 +73,8 @@ export const publications = [
       'Mahesh Raveendranatha Panicker, Rudra Sainatha, Gopika Gopikrishnan, Somashekhar Dehury',
     venue: 'IEEE ISBI, London',
     year: '2026',
-    tag: 'Co-Author',
-    link: 'https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Somashekhar%20Dehury',
+    tag: 'Ultrasound + DL',
+    link: 'https://ieeexplore.ieee.org/document/11516005',
   },
 ]
 
