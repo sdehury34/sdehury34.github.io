@@ -2,6 +2,9 @@
 // EDIT THIS FILE to change everything shown on the site.
 // ============================================================
 
+// Institution logos live in /public/logos.
+const logo = (file) => `${import.meta.env.BASE_URL}logos/${file}`
+
 export const profile = {
   name: 'Somashekhar Dehury',
   firstName: 'Somashekhar',
@@ -22,7 +25,7 @@ export const profile = {
   cv: `${import.meta.env.BASE_URL}Somashekhar_Dehury_CV.pdf`,
   // wrap words in **double asterisks** to highlight them on the page
   about: [
-    "I went from programming 8051 microcontrollers to **imaging the human heart**. After my B.Tech in Electronics & Communication at NIT Calicut (CGPA 8.95), I'm now pursuing an **Industrial Doctorate** at SIT, Singapore, as a **SINGA Scholar**, building **wearable cardiac ultrasound** with Tricog Health.",
+    "I went from programming 8051 microcontrollers to **imaging the human heart**. After my B.Tech in Electronics & Communication at NIT Calicut (CGPA 8.95), I'm now pursuing an **Industrial Doctorate** at SIT, Singapore, as a **SINGA Scholar**, building **wearable cardiac ultrasound** with Tricog Health. Along the way I interned at **ISRO**, and as a **DAAD WISE Scholar** spent a research summer at GSI Helmholtz Centre in Germany.",
     'My work lives where signals meet silicon: **deep learning** for image reconstruction, ultrasound physics simulation with **k-Wave and SIMUS**, **GPU-accelerated beamforming**, and the embedded front-end electronics and testing that make it all real.',
     "Beyond the lab, I'm drawn to anything **med-tech**, including **augmented reality in healthcare** with Unity, and I'm open to collaborations across deep learning, simulation, and embedded systems.",
   ],
@@ -179,6 +182,7 @@ export const projects = [
 
 // type controls the color coding on the timeline:
 // research (sky) | education (teal) | internship (violet) | award (amber)
+// logos: institution symbols shown on the entry (files in /public/logos)
 export const milestones = [
   {
     year: 'Present',
@@ -187,6 +191,11 @@ export const milestones = [
     title: 'Industrial Doctorate, SIT × Tricog Health',
     detail:
       'SINGA Scholar at the Singapore Institute of Technology (Infocomm Technology), researching wearable multi-view echocardiography: flexible ultrasound arrays, adaptive beamforming, and GPU imaging pipelines.',
+    logos: [
+      { src: logo('sit.png'), alt: 'Singapore Institute of Technology', tall: true },
+      { src: logo('tricog.png'), alt: 'Tricog Health' },
+      { src: logo('astar.png'), alt: 'A*STAR (SINGA)' },
+    ],
   },
   {
     year: '2025',
@@ -195,6 +204,7 @@ export const milestones = [
     title: 'B.Tech, NIT Calicut',
     detail:
       'Graduated in Electronics & Communication Engineering with a CGPA of 8.95.',
+    logos: [{ src: logo('nitc.svg'), alt: 'NIT Calicut', tall: true }],
   },
   {
     year: '2024',
@@ -203,6 +213,10 @@ export const milestones = [
     title: 'DAAD WISE Scholar, GSI Helmholtz Centre, Germany',
     detail:
       'Research intern at the heavy-ion research facility in Darmstadt, building microcontroller-based data acquisition and instrumentation control.',
+    logos: [
+      { src: logo('daad.svg'), alt: 'DAAD' },
+      { src: logo('gsi.svg'), alt: 'GSI Helmholtz Centre' },
+    ],
   },
   {
     year: '2023',
@@ -211,6 +225,7 @@ export const milestones = [
     title: 'Research Intern, ISRO',
     detail:
       'Worked on lunar lander control simulation and deep-learning-based crater detection at Trivandrum.',
+    logos: [{ src: logo('isro.svg'), alt: 'ISRO', tall: true }],
   },
   {
     year: '2022',
@@ -227,10 +242,28 @@ export const education = [
     school: 'Singapore Institute of Technology',
     degree: 'Industrial Doctorate in Infocomm Technology (SINGA Scholar)',
     years: 'Ongoing',
+    logo: { src: logo('sit.png'), alt: 'Singapore Institute of Technology', tall: true },
   },
   {
     school: 'National Institute of Technology, Calicut',
     degree: 'B.Tech in Electronics & Communication, CGPA 8.95',
     years: '2021-2025',
+    logo: { src: logo('nitc.svg'), alt: 'NIT Calicut', tall: true },
+  },
+]
+
+// Scholarships & fellowships, shown next to education in About
+export const honors = [
+  {
+    title: 'SINGA Scholar',
+    org: 'Singapore International Graduate Award · A*STAR, Singapore',
+    years: 'Ongoing',
+    logo: { src: logo('astar.png'), alt: 'A*STAR' },
+  },
+  {
+    title: 'DAAD WISE Scholar',
+    org: 'German Academic Exchange Service · GSI Helmholtz Centre, Darmstadt',
+    years: '2024',
+    logo: { src: logo('daad.svg'), alt: 'DAAD' },
   },
 ]

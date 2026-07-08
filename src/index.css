@@ -646,6 +646,58 @@ section {
   color: var(--muted);
   font-size: 0.95rem;
 }
+.edu-card .edu-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.edu-card .edu-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* ---- institution logo chips (light backing keeps dark marks legible) ---- */
+.org-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.org-logo {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: rgba(244, 247, 250, 0.94);
+  border: 1px solid var(--line);
+  filter: grayscale(0.15);
+  opacity: 0.95;
+  transition: filter 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+}
+.org-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.org-logo img {
+  height: 100%;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  display: block;
+}
+/* square emblems (crests, seals) need more height to stay legible */
+.org-logo.tall {
+  height: 68px;
+  padding: 9px 12px;
+}
 
 /* ============================================================
    Skills

@@ -19,6 +19,19 @@ export default function Milestones() {
               </div>
               <h3>{m.title}</h3>
               <p className="detail">{m.detail}</p>
+              {m.logos && (
+                <div className="org-logos">
+                  {m.logos.map((l) => (
+                    <span
+                      className={`org-logo${l.tall ? ' tall' : ''}`}
+                      key={l.alt}
+                      title={l.alt}
+                    >
+                      <img src={l.src} alt={l.alt} loading="lazy" />
+                    </span>
+                  ))}
+                </div>
+              )}
             </Reveal>
           ))}
         </div>
